@@ -1,0 +1,65 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 500px;
+            height: 300px;
+           border: 2px solid black;
+            text-align: center;
+            align-content: center;
+            background-color: skyblue;
+            border-radius:50px;
+            
+
+        }
+        button{
+            background-color:rgb(243, 166, 233);
+            height: 40px;
+            width: 90px;
+            border-radius: 10px;
+            margin-left:200px;
+            margin-top:10px ;
+            
+           
+        }
+        button:hover{
+            background-color: blueviolet;
+        }
+        .container1{
+           
+           
+            margin-top:200px;
+            margin-left:500px ;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+    <div class="container">
+        Colour Change
+        
+    </div>
+    <button onclick="changeColor()">Click here </button> 
+</div>
+    <script>    
+      function generateRandomColor() {
+        let r = Math.floor(Math.random() * 255);
+        let g = Math.floor(Math.random() * 255);
+        let b = Math.floor(Math.random() * 255);
+        return` rgb(${r}, ${g}, ${b})`;
+        }
+        function changeColor() {
+            let container = document.querySelector('div');
+            let newColor = generateRandomColor();
+            container.style.backgroundColor = newColor;
+            container.innerHTML = newColor;
+        }
+    </script>
+</body>
+</html>
